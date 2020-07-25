@@ -29,6 +29,13 @@
 			-o-background-size: cover !important;
 			background-size: cover !important;
 		}
+		.html-background-progressivest {
+			background: url(images/bg.jpg) no-repeat center center fixed, url(images/bg-medium.jpg) no-repeat center center fixed, url(images/bg-small.jpg) no-repeat center center fixed !important;
+			-webkit-background-size: cover !important;
+			-moz-background-size: cover !important;
+			-o-background-size: cover !important;
+			background-size: cover !important;
+		}
 		
 		body {
 			background-color: nonre !important;
@@ -68,7 +75,7 @@
 <script>
 	$(document).ready(function(){
 		// Progressive loading of HD background image
-		$('html').addClass('html-background-progressive');
+		$('html').addClass('html-background-progressivest');
 	});
 </script>
 
