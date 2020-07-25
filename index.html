@@ -15,10 +15,19 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<style>
-		* { margin: 0; padding: 0; }
+		* { 
+			margin: 0; 
+			padding: 0; 
+		}
+
+		html, body {
+			height:100%;
+			width:100%;
+			overflow:hidden;
+		}
 		
 		html { 
-			background: url(images/bg.jpg) no-repeat center center fixed, url(images/bg-small.jpg) no-repeat center center fixed; 
+			background: url(images/bg-small.jpg) no-repeat center center fixed; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -37,5 +46,19 @@
     </div>
 	
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	// Progressive loading of HD background image
+	var bgUrl = "images/bg.jpg";
+	$(document).ready(function(){
+		$('<img src="' + bgUrl + '">').on('load', function() {
+			$('html').css({
+				'background-image': 'url(' + bgUrl + ') no-repeat center center fixed'
+			});
+			console.log($('html').css('background-image'));
+		});
+	});
+</script>
 
 </html>
