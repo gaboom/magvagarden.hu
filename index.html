@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	
+
 	<title>Magva Garden</title>
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,71 +14,37 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 
-	<style>
-		html { 
-			background: url(images/bg-small.jpg) no-repeat center center fixed !important;
-			-webkit-background-size: cover !important;
-			-moz-background-size: cover !important;
-			-o-background-size: cover !important;
-			background-size: cover !important;
-		}
-		.html-background-progressive {
-			background: url(images/bg-medium.jpg) no-repeat center center fixed, url(images/bg-small.jpg) no-repeat center center fixed !important;
-			-webkit-background-size: cover !important;
-			-moz-background-size: cover !important;
-			-o-background-size: cover !important;
-			background-size: cover !important;
-		}
-		.html-background-progressivest {
-			background: url(images/bg.jpg) no-repeat center center fixed, url(images/bg-small.jpg) no-repeat center center fixed !important;
-			-webkit-background-size: cover !important;
-			-moz-background-size: cover !important;
-			-o-background-size: cover !important;
-			background-size: cover !important;
-		}
-		
-		body {
-			background-color: nonre !important;
-		}
-		
-		.popup {
-			width: 400px;
-			margin: 50px auto;
-			padding: 20px;
-			background: white;
-			-moz-box-shadow: 0 0 20px black;
-			-webkit-box-shadow: 0 0 20px black;
-			box-shadow: 0 0 20px black;
-			border-radius: 50px 50px 50px 50px;
-			-moz-border-radius: 50px 50px 50px 50px;
-			-webkit-border-radius: 50px 50px 50px 50px;
-			visibility: hidden;
-		}
-		p {
-			font: 15px/2 Georgia, Serif;
-			margin: 0 0 30px 0;
-			text-indent: 40px;
-		}
-	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="lib/index.js"></script>
 </head>
 
 <body>
-
-	<div class="popup">
-		<p>Hírlevél</p>
+	<div id="popup" class="hidden">
+		<h1>Magva Garden</h1>
+		<p id="message"></p>
+		<ul>
+			<li>Kapcsolat: <a id="contact" href="mailto:magva@magvagarden.hu">magva@magvagarden.hu</a></li>
+			<li><a id="newsletter"  href="#" target="_blank">Hírlevél feliratkozás</a></li>
+			<li><a id="order" href="#" target="_blank">Aktuális megrendelő</a></li>
+		</ul>
+		<p id="ps"></p>
+		<p class="topSpace">© Magva Garden <script>document.write(new Date().getFullYear())</script> Minden jog fenntartva!</p>
 	</div>
-	
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173690715-1"></script>
 <script>
-	$(document).ready(function(){
-		// Progressive loading of HD background image
-		$('html').addClass('html-background-progressivest');
-	});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173690715-1');
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" defer></script>
-
 </html>
